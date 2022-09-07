@@ -1,5 +1,6 @@
 .tareef {
-  border: 2px solid red;
+  transform: translateX(-20%);
+  animation: slideInLeft 1s forwards;
   display: flex;
   flex-direction: column;
   @media screen and (min-width: 501px) {
@@ -40,6 +41,8 @@
 }
 
 .rating {
+  transform: translateX(20%);
+  animation: slideInRight 1s forwards;
   //   border: 2px solid red;
   display: flex;
   flex-direction: column;
@@ -60,6 +63,19 @@
 
     @media screen and (min-width: 501px) {
       flex-direction: row;
+      width: 60%;
+
+      &:nth-child(2) {
+        position: relative;
+
+        left: 3.5rem;
+      }
+
+      &:nth-child(3) {
+        position: relative;
+
+        left: 7rem;
+      }
     }
   }
 
@@ -73,5 +89,69 @@
     width: 8rem;
     display: flex;
     justify-content: space-evenly;
+  }
+}
+
+.reviewer {
+  padding: 2.2rem;
+  background: var(--VeryDarkMagenta);
+  border-radius: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  row-gap: 1.7rem;
+
+  @media screen and (min-width: 501px) {
+    &:nth-child(2) {
+      position: relative;
+
+      top: 1rem;
+    }
+
+    &:nth-child(3) {
+      position: relative;
+
+      top: 2rem;
+    }
+  }
+
+  &__info {
+    display: flex;
+    // border: 2px solid red;
+  }
+
+  &__img {
+    border-radius: 50%;
+    width: 2.5rem;
+    height: auto;
+  }
+
+  &__details {
+    margin-left: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+  }
+
+  &__name {
+    color: var(--White);
+    font-size: 1.1rem;
+    font-weight: 500;
+  }
+
+  &__verified {
+    color: var(--SoftPink);
+    opacity: 0.7;
+    font-weight: 500;
+    font-size: 1rem;
+  }
+
+  &__review {
+    color: var(--LightGrayishMagenta);
+    line-height: 1.3rem;
+    opacity: 0.9;
+
+    @media screen and (min-width: 501px) {
+      font-size: 1.1rem;
+    }
   }
 }
